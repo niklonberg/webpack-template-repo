@@ -1,5 +1,6 @@
 import "./index.css";
-const log = console.log;
+
+const { log } = console;
 log("hello world");
 
 function component() {
