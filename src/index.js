@@ -1,4 +1,5 @@
 import "./index.css";
+import sayHi from "./components/js/sayHi";
 
 const { log } = console;
 log("hello world");
@@ -13,3 +14,5 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+sayHi("Buddy");
