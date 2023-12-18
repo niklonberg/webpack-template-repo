@@ -2,13 +2,17 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    index: "./src/index.js",
+  }, // if you need more entrypoints, add them here
   mode: "development",
   output: {
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true, // cleans directory when we build
   },
   plugins: [
+    // if you need more entry points, you would add new HtmlWebpackPlugins as needed
     new HtmlWebpackPlugin({
       title: "Change Me In Webpack.config",
       template: "./src/index-template.html",
