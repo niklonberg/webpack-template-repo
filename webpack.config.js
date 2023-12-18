@@ -22,6 +22,10 @@ module.exports = {
     }),
   ],
   devtool: "inline-source-map",
+  devServer: {
+    static: "./dist",
+    hot: true,
+  },
   module: {
     rules: [
       {
@@ -37,5 +41,9 @@ module.exports = {
         type: "asset/resource",
       },
     ],
+  },
+  optimization: {
+    // consider removing this?
+    runtimeChunk: "single",
   },
 };
